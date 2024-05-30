@@ -1,0 +1,17 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace WebMVC.Controllers
+{
+
+    //HomeController 是类名 。 Home 是控制器名。 引入 using using Microsoft.AspNetCore.Mvc; 并继承
+    public class HomeController:Controller
+    {
+        //创建 视图。  视图文件夹下的 有与 控制器名 相同的 文件夹。
+        //创建视图 方法的名称 与 视图文件夹下的 文件名称要一样
+        public IActionResult Index()
+        {
+            //返回视图
+            return View();
+        }
+    }
+}

@@ -1,0 +1,28 @@
+using System.Data.SqlClient;//  1,导入命名空间
+
+namespace adoCoreNet
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Hello, World!");
+
+            // 2.1  声明链接字符串： 服务器名称+数据库名称+登入方式（Windows/sqlServer--用户名+密码）
+
+            string conStr = "Data source=LAPTOP-CD5OVERJ;Initial Catalog=MySchool;uid=sa;pwd=970909";
+
+
+            //  2,创建应用程序搭配数据库通道
+            SqlConnection con= new SqlConnection(conStr);
+
+            //  3,开启链接
+            con.Open();
+            Console.WriteLine("got it...");
+
+          
+
+        }
+    }
+}

@@ -1,0 +1,38 @@
+create database learnJoin
+go
+
+use learnJoin
+go
+
+create table Dept
+(
+	Id int primary key identity,
+	DName varchar(30) not null unique
+);
+go
+
+create table Emp
+(
+	Id int primary key identity,
+	EName varchar(30) not null unique, 
+	Sex char(4) not null default'男', 
+	Age tinyint not null default 10,
+	Sal decimal(10,2) not null default 0,
+	Did int not null
+); 
+go
+
+insert into Dept values('开发部'),('测试部'),('市场部'),('销售部'),('账务部');
+go
+
+insert into Emp values
+('赵小飞','男',30,8000,1),
+('李换英','女',20,3100,3),
+('张三','男',25,6000,2),
+('李国华','男',30,3000,4),
+('徐媛媛','女',20,7200,1),
+('帅天行','男',32,9000,1),
+('曲芙蓉','女',22,3100,3),
+('李四','男',25,6000,2),	
+('王五','男',28,4000,4),
+('姖倩倩','女',23,5200,1);

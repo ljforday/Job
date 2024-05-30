@@ -1,0 +1,3 @@
+npm i -g json-server  ---全局安装
+
+json-server --watch db.json  --

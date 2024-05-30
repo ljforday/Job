@@ -1,0 +1,57 @@
+create database step02;
+go
+use step02;
+go
+-- student table
+create table StudentInfo
+(
+	stuId char(10) primary key,
+	stuName varchar(20),
+	classId int,
+	stuIphone char(11),
+	stuSex char(4),
+	stuBirthday dateTime
+);
+go
+--class table
+create table ClassInfo
+(
+	Id int primary key identity,
+	Name varchar(30),
+	College varchar(20)
+);
+go
+-- score table 
+create table StudentScore
+(
+	Id int primary key identity,
+	stuId char(10),
+	courseName varchar(20),
+	theoryScore int,
+	skillScore int
+);
+go
+INSERT INTO dbo.StudentInfo(stuId ,stuName ,classId ,stuIphone ,stuSex ,stuBirthday)values
+('1803255011','张三','5','13823204456','男','1999-09-09'),
+('1803255012','李四','4','13823204451','女','1995-09-09'),
+('1803255017','王五','2','13823204452','男','1999-09-09'),
+('1803255013','赵六','1','13823204453','女','1997-09-09'),
+('1803255014','小黑','5','13823204454','男','1998-09-09'),
+('1803255015','大白','5','13823204459','男','1995-09-09'),
+('1803255016','小黄','0','13823204457','男','1999-09-09');
+go
+INSERT INTO dbo.ClassInfo(Name,College)values
+('软件技术1班','计算机系'),
+('会计1班','经济管理'),
+('会计2班','经济管理'),
+('软件外包1班','计算机系'),
+('会计3班','计算机系');
+go
+INSERT INTO dbo.StudentScore(stuId ,courseName ,theoryScore ,skillScore )values
+('1803255011','会计',90,80),
+('1803255012','C#入门',80,90),
+('1803255017','数据库教程',70,70),
+('1803255013','会计',80,79),
+('1803255014','JavaScript',90,98),
+('1803255015','会计',90,88),
+('1803255016','C#入门',90,87);

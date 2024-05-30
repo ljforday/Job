@@ -1,0 +1,18 @@
+npx create-react-app 项目名
+
+ npm install react-redux @reduxjs/toolkit -s  --安装RTK
+
+npm uninstall express —save （如果是安装在dependencies中）
+
+npm uninstall express —save-dev （如果是安装在devDependencies中）
+
+npm rm express
+
+如果您在全局范围内安装了npm包，您可以使用以下命令将其卸载：
+npm uninstall <package-name> -g
+
+例如，要卸载全局安装的webpack包，您可以运行以下命令：
+npm uninstall webpack -g
+
+卸载react？
+npm uninstall -g create-react-app

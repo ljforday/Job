@@ -1,0 +1,4 @@
+git config --global user.name “ljforday”   --账户名称
+git config --global user.email “ljforday0909@gmail.com”
+
+在powershell 中配置

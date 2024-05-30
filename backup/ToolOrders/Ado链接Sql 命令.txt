@@ -1,0 +1,10 @@
+//2.1 声明链接字符串 服务器的名称 数据库的名称 登入方式(windows 或 sa +用户名加上密码)
+
+string conStr = "Data Source=LAPTOP-QRDCCK71;Initial Catalog=Myschool;uid=sa;pwd=970909";
+
+//2,创建链接数据通道
+SqlConnection con = new SqlConnection(conStr);
+
+//3,开启链接
+con.Open();
+Console.WriteLine("got it");

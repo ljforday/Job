@@ -1,0 +1,5 @@
+npm i nodemon -D   --development dependence . when the project is packaged , you can delete it .
+
+npx nodemon  --starts
+
+npm r nodemon -g     -- delete global

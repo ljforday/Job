@@ -1,0 +1,39 @@
+show tables;
+
+create table cat(name varchar(50) not null,age int unsigned);
+
+create table classes(id int unsigned primary key auto_increment, name varchar(30) not null);
+
+create table student(id int unsigned primary key auto_increment,high decimal(5,2),gender enum('boy','girl'));
+
+-- add table
+alter table classes add mascot varchar(30);
+
+-- change table 
+alter table classes modify mascot varchar(40);
+
+-- delete field 
+alter table classes drop mascot; 
+
+desc classes;
+
+--  add 
+insert into classes(id,name) values(3,'wangwu');
+
+--  insert all 
+insert into students values(1,'165','girl');
+
+-- insert mutiple rows 
+insert into students(gender) values('girl'),('boy');
+
+--  change according to conditions
+update students set high=166 where gender='girl';
+
+select * from students where id=2;
+
+--  physical deletion
+delete from students where id=2;
+
+--  use together
+alter table students add is_delete bit default 0;
+update students set is_delete=1 where id=3;
