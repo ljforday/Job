@@ -35,3 +35,8 @@ public class Blog
 
     public List<Post> Posts { get; } = new();
 }
+ 
+安全连接 （不受信任的的证书）
+"ConnectionStrings": {
+  "ShopCon": "Data source=LAPTOP-CD5OVERJ;Initial Catalog=MySchool;uid=sa;pwd=970909; TrustServerCertificate=true"
+},
